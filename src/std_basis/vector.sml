@@ -115,4 +115,11 @@ signature VECTOR = sig
 end
 
 structure Vector :> VECTOR = struct end
+(*!
+ * Alias for `Vector.vector`.
+ *)
 datatype vector = datatype Vector.vector
+(*!
+ * Alias for `Vector.fromList`.
+ *)
+val vector = Vector.fromList

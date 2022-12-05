@@ -140,7 +140,3 @@ structure Array :> ARRAY = struct end
  * Alias for `Array.array`.
  *)
 datatype array = datatype Array.array
-(*!
- * Alias for `Array.vector`.
- *)
-val vector = Array.vector
