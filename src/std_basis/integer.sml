@@ -1,5 +1,5 @@
 structure Int :> sig type int = int end = struct end
-structure LargeInt :> sig type int end = struct end
+structure LargeInt :> sig eqtype int end = struct end
 
 (*!
  * Instances of the INTEGER signature provide a type of signed integers of either a fixed or

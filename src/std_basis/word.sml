@@ -1,5 +1,5 @@
 structure Word :> sig type word = word end = struct end
-structure LargeWord :> sig type word end = struct end
+structure LargeWord :> sig eqtype word end = struct end
 
 (*!
  * Instances of the signature WORD provide a type of unsigned integer with modular arithmetic and

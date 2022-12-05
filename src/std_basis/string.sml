@@ -2,7 +2,7 @@ structure String :> sig type string = string end = struct end
 structure CharVector :> sig type vector end = struct end
 structure Char :> sig type char = char end = struct end
 structure WideCharVector :> sig type vector end = struct end
-structure WideChar :> sig type char end = struct end
+structure WideChar :> sig eqtype char end = struct end
 
 (*!
  * The STRING signature specifies the basic operations on a string type, which is a vector of the
