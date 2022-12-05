@@ -153,10 +153,6 @@ val op @ = List.@
  *)
 val app = List.app
 (*!
- * Alias for `List.concat`.
- *)
-val concat = List.concat
-(*!
  * Alias for `List.foldl`.
  *)
 val foldl = List.foldl

@@ -253,7 +253,3 @@ structure WideSubstring :> SUBSTRING (* OPTIONAL *)
  * Alias for `Substring.substring`.
  *)
 type substring = Substring.substring
-(*!
- * Alias for `Substring.substring`.
- *)
-val substring = Substring.substring

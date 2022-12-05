@@ -197,3 +197,11 @@ val size = String.size
  * Alias for `String.str`.
  *)
 val str = String.str
+(*!
+ * Alias for `String.substring`.
+ *)
+val substring = String.substring
+(*!
+ * Alias for `String.concat`.
+ *)
+val concat = String.concat
