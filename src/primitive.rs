@@ -13,4 +13,5 @@ pub const FILES: &[(&str, &str)] = files![
   "primitive/string.sml",
   "primitive/bool.sml",
   "primitive/ref.sml",
+  "primitive/use.sml",
 ];
