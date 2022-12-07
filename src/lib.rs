@@ -6,7 +6,6 @@
 mod tests;
 
 pub mod mlton;
-pub mod primitive;
 pub mod sml_of_nj;
 pub mod smlnj_lib;
 pub mod std_basis;

@@ -15,14 +15,13 @@ Most of the the SML files within are basically just remixes/alternative presenta
 
 Each directory in `src` came from different sources, and are covered by different licenses.
 
-| Directory         | Source        | License                                 |
-| ----------------- | ------------- | --------------------------------------- |
-| `mlton`           | [mlton][]     | `license-mlton.txt`                     |
-| `primitive`       | [azdavis][]   | `license-mit.md` or `license-apache.md` |
-| `sml_of_nj`       | [sml-of-nj][] | `license-smlnj.txt`                     |
-| `smlnj_lib`       | [smlnj-lib][] | `license-smlnj.txt`                     |
-| `std_basis`       | [basis][]     | `license-std-basis.txt`                 |
-| `std_basis_extra` | [extra][]     | Unknown                                 |
+| Directory         | Source        | License                 |
+| ----------------- | ------------- | ----------------------- |
+| `mlton`           | [mlton][]     | `license-mlton.txt`     |
+| `sml_of_nj`       | [sml-of-nj][] | `license-smlnj.txt`     |
+| `smlnj_lib`       | [smlnj-lib][] | `license-smlnj.txt`     |
+| `std_basis`       | [basis][]     | `license-std-basis.txt` |
+| `std_basis_extra` | [extra][]     | Unknown                 |
 
 [basis]: https://smlfamily.github.io/Basis
 [azdavis]: https://azdavis.net
