@@ -7,6 +7,3 @@ publish = false
 
 [lib]
 doctest = false
-
-[dev-dependencies]
-xshell = "0.2"
