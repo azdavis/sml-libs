@@ -17,10 +17,10 @@ Each directory in `src` came from different sources, and are covered by differen
 
 | Directory         | Source        | License                 |
 | ----------------- | ------------- | ----------------------- |
-| `mlton`           | [mlton][]     | `license-mlton.txt`     |
-| `sml_of_nj`       | [sml-of-nj][] | `license-smlnj.txt`     |
-| `smlnj_lib`       | [smlnj-lib][] | `license-smlnj.txt`     |
-| `std_basis`       | [basis][]     | `license-std-basis.txt` |
+| `mlton`           | [mlton][]     | `LICENSE-MLTON.txt`     |
+| `sml_of_nj`       | [sml-of-nj][] | `LICENSE-SMLNJ.txt`     |
+| `smlnj_lib`       | [smlnj-lib][] | `LICENSE-SMLNJ.txt`     |
+| `std_basis`       | [basis][]     | `LICENSE-STD-BASIS.txt` |
 | `std_basis_extra` | [extra][]     | Unknown                 |
 
 [basis]: https://smlfamily.github.io/Basis
