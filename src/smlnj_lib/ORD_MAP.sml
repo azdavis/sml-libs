@@ -12,6 +12,7 @@ signature ORD_MAP = sig
   val lookup : 'a map * Key.ord_key -> 'a
   val inDomain : ('a map * Key.ord_key) -> bool
   val remove : 'a map * Key.ord_key -> 'a map * 'a
+  val findAndRemove : 'a map * Key.ord_key -> ('a map * 'a) option
   val first : 'a map -> 'a option
   val firsti : 'a map -> (Key.ord_key * 'a) option
   val numItems : 'a map -> int

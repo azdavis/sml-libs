@@ -1,6 +1,7 @@
 signature REGEXP_SYNTAX = sig
   exception CannotCompile
-  structure CharSet : ORD_SET where type Key.ord_key = char
+  structure CharSet : ORD_SET
+    where type Key.ord_key = char
   datatype syntax = Group of syntax | Alt of syntax list | Concat of syntax list | Interval of (syntax * int * int option) | MatchSet of CharSet.set | NonmatchSet of CharSet.set | Char of char | Begin | End
   val optional : syntax -> syntax
   val closure : syntax -> syntax

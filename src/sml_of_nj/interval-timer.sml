@@ -1,11 +1,11 @@
 signature INTERVAL_TIMER = sig
   (*!
-  tick () Returns the granularity of the interval timer.
-  !*)
+   * tick () Returns the granularity of the interval timer.
+   *)
   val tick : unit -> Time.time
   (*!
-  See setIntTimer.
-  !*)
+   * See setIntTimer.
+   *)
   val setIntTimer : Time.time option -> unit
 end
 

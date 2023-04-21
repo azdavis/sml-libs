@@ -12,4 +12,5 @@ signature CONTROL_SET = sig
   val app : ({ctl : 'a control, info : 'b} -> unit) -> ('a, 'b) control_set -> unit
   val stringControls : 'a Controls.value_cvt -> ('a, 'b) control_set -> (string, 'b) control_set
 end
+
 structure ControlSet : CONTROL_SET = struct end

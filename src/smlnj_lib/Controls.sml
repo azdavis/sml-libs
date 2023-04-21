@@ -18,4 +18,5 @@ signature CONTROLS = sig
   val save'restore : 'a control -> unit -> unit
   val compare : ('a control * 'a control) -> order
 end
+
 structure Controls : CONTROLS = struct end
