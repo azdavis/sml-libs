@@ -16,8 +16,6 @@ signature MLTON_RLIMIT = sig
   val residentSetSize : t (* RSS max resident set size *)
   val stackSize : t (* STACK max stack size *)
   val virtualMemorySize : t (* AS virtual memory limit *)
-  (* TODO figure out what rlim is
-  val get : t -> {hard : rlim, soft : rlim}
-  val set : t * {hard : rlim, soft : rlim} -> unit
-   *)
+  val get : t -> { hard : RLim.t, soft : RLim.t }
+  val set : t * { hard : RLim.t, soft : RLim.t } -> unit
 end
