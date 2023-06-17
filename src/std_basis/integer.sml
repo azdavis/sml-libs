@@ -10,17 +10,30 @@ structure LargeInt :> sig eqtype int end = struct end
 signature INTEGER = sig
   eqtype int
   (*!
-   * These convert between integer values of types int and LargeInt.int. The latter raises Overflow
-   * if the value does not fit. Int<M>.fromLarge o Int<N>.toLarge converts an integer from type
-   * Int<N>.int to Int<M>.int.
+   * Converts between integer values of types `int` and `LargeInt.int`.
+   *
+   * `Int<M>.fromLarge o Int<N>.toLarge` converts an integer from type `Int<N>.int` to `Int<M>.int`.
    *)
   val toLarge : int -> LargeInt.int
+  (*!
+   * Converts between integer values of types `LargeInt.int` and `int`.
+   *
+   * Raises `Overflow` if the value does not fit.
+   *
+   * `Int<M>.fromLarge o Int<N>.toLarge` converts an integer from type `Int<N>.int` to `Int<M>.int`.
+   *)
   val fromLarge : LargeInt.int -> int
   (*!
-   * These convert between integer values of types int and the default integer type. They raise
-   * Overflow if the value does not fit.
+   * Converts from integer values of types `int` and the default integer type.
+   *
+   * Raises Overflow if the value does not fit.
    *)
   val toInt : int -> Int.int
+  (*!
+   * Converts from the default integer type and integer values of types `int`.
+   *
+   * Raises Overflow if the value does not fit.
+   *)
   val fromInt : Int.int -> int
   (*!
    * If SOME(n), this denotes the number n of significant bits in type int, including the sign bit.
@@ -29,19 +42,28 @@ signature INTEGER = sig
    *)
   val precision : Int.int option
   (*!
-   * The minimal (most negative) and the maximal (most positive) integers, respectively,
-   * representable by int. If a value is NONE, int can represent all negative (respectively,
-   * positive) integers, within the limits of the heap size. If precision is SOME(n), then we have
+   * The minimal (most negative) representable by int. If this is NONE, int can represent all
+   * negative integers, within the limits of the heap size. If precision is SOME(n), then we have
    * minInt = -2(n-1) and maxInt = 2(n-1) - 1.
    *)
   val minInt : int option
+  (*!
+   * The maximal (most positive) integer representable by int. If this is NONE, int can represent
+   * all positive integers, within the limits of the heap size. If precision is SOME(n), then we
+   * have maxInt = 2(n-1) - 1.
+   *)
   val maxInt : int option
   (*!
-   * These functions return the sum, difference, and product, respectively, of the arguments. They
-   * raise Overflow when the result is not representable.
+   * Returns the sum of the arguments. Raises Overflow when the result is not representable.
    *)
   val + : int * int -> int
+  (*!
+   * Returns the difference of the arguments. Raises Overflow when the result is not representable.
+   *)
   val - : int * int -> int
+  (*!
+   * Returns the product of the arguments. Raises Overflow when the result is not representable.
+   *)
   val * : int * int -> int
   (*!
    * i div j returns the greatest integer less than or equal to the quotient of i by j, i.e.,
@@ -75,11 +97,20 @@ signature INTEGER = sig
    *)
   val compare : int * int -> order
   (*!
-   * These return true if the corresponding relation holds between the two integers.
+   * Return true if the first argument is less than the second.
    *)
   val < : int * int -> bool
+  (*!
+   * Return true if the first argument is less than or equal to the second.
+   *)
   val <= : int * int -> bool
+  (*!
+   * Return true if the first argument is greater than the second.
+   *)
   val > : int * int -> bool
+  (*!
+   * Return true if the first argument is greater than or equal to the second.
+   *)
   val >= : int * int -> bool
   (*!
    * ~ i returns the negation of i, i.e., (0 - i). It raises Overflow when the result is not
@@ -93,9 +124,12 @@ signature INTEGER = sig
    *)
   val abs : int -> int
   (*!
-   * These return the smaller (respectively, larger) of the arguments.
+   * min (a, b) returns the smaller of a and b.
    *)
   val min : int * int -> int
+  (*!
+   * max (a, b) returns the larger of a and b.
+   *)
   val max : int * int -> int
   (*!
    * sign i returns ~1, 0, or 1 when i is less than, equal to, or greater than 0, respectively.
