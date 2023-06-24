@@ -8,6 +8,9 @@
  * admits equality even if ty does not.
  *)
 signature ARRAY = sig
+  (*!
+   * A mutable sequence with constant-time access and update.
+   *)
   eqtype 'a array
   type 'a vector = 'a Vector.vector
   (*!

@@ -50,11 +50,20 @@ signature SUBSTRING = sig
    *)
   val base : substring -> string * int * int
   (*!
-   * See extract.
+   * extract (s, i, NONE) returns the substring of s from the i(th) character to the end of the
+   * string, i.e., the string s[i..|s|-1]. This raises Subscript unless 0 <= i <= |s|.
+   *
+   * extract (s, i, SOME j) returns the substring of size j starting at index i, i.e., the string
+   * s[i..i+j-1]. It raises Subscript if i < 0 or j < 0 or |s| < i + j.
+   *
+   * Note that, if defined, extract returns the empty substring when i = |s|.
    *)
   val extract : string * int * int option -> substring
   (*!
-   * See extract.
+   * substring (s, i, j) returns the substring s[i..i+j-1], i.e., the substring of size j starting
+   * at index i. This is equivalent to extract(s, i, SOME j).
+   *
+   * We require that base o substring be the identity function on valid arguments.
    *)
   val substring : string * int * int -> substring
   (*!

@@ -2,6 +2,9 @@
  * The Vector structure defines polymorphic vectors, immutable sequences with constant-time access.
  *)
 signature VECTOR = sig
+  (*!
+   * An immutable sequence with constant-time access.
+   *)
   eqtype 'a vector
   (*!
    * The maximum length of vectors supported by this implementation. Attempts to create larger
