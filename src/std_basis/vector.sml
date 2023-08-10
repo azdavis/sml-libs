@@ -5,7 +5,7 @@ signature VECTOR = sig
   (*!
    * An immutable sequence with constant-time access.
    *)
-  eqtype 'a vector
+  eqtype 'a vector = 'a vector
   (*!
    * The maximum length of vectors supported by this implementation. Attempts to create larger
    * vectors will result in the Size exception being raised.
@@ -118,10 +118,6 @@ signature VECTOR = sig
 end
 
 structure Vector :> VECTOR = struct end
-(*!
- * Alias for `Vector.vector`.
- *)
-datatype vector = datatype Vector.vector
 (*!
  * Alias for `Vector.fromList`.
  *)
